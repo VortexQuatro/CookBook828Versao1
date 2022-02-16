@@ -1,6 +1,6 @@
-package br.com.letscode.cookbook.domain;
+package com.vorexquatro.cookbook.domain;
 
-import br.com.letscode.cookbook.enums.TipoRendimento;
+import com.vorexquatro.cookbook.enums.TipoRendimento;
 
 public class Rendimento {
     private int minimo;

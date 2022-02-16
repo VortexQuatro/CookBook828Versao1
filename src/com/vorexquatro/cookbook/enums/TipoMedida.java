@@ -1,4 +1,4 @@
-package br.com.letscode.cookbook.enums;
+package com.vorexquatro.cookbook.enums;
 
 public enum TipoMedida {
     UNIDADE,

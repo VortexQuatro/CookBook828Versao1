@@ -1,7 +1,7 @@
-package br.com.letscode.cookbook.view;
+package com.vorexquatro.cookbook.view;
 
-import br.com.letscode.cookbook.controller.Catalogo;
-import br.com.letscode.cookbook.domain.Receita;
+import com.vorexquatro.cookbook.controller.Catalogo;
+import com.vorexquatro.cookbook.domain.Receita;
 
 import java.util.Locale;
 import java.util.Scanner;

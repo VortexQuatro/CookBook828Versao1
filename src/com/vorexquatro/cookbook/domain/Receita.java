@@ -1,6 +1,6 @@
-package br.com.letscode.cookbook.domain;
+package com.vorexquatro.cookbook.domain;
 
-import br.com.letscode.cookbook.enums.Categoria;
+import com.vorexquatro.cookbook.enums.Categoria;
 
 import java.util.List;
 

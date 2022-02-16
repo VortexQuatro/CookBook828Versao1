@@ -1,6 +1,6 @@
-package br.com.letscode.cookbook.controller;
+package com.vorexquatro.cookbook.controller;
 
-import br.com.letscode.cookbook.domain.Receita;
+import com.vorexquatro.cookbook.domain.Receita;
 
 import java.util.ArrayList;
 import java.util.List;
