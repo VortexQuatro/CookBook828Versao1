@@ -35,7 +35,19 @@ public class CatalogoView {
     }
 
     public void find() {
+        Scanner scanner = new Scanner(System.in);                                       // Rubens
         //Capturar o nome da receita.
+        String stringAux;                                                               // Rubens
+        System.out.println("Digiye o nome da receita a ser localizada: ");              // Rubens
+        stringAux = scanner.nextLine().trim().toUpperCase(Locale.getDefault());         // Rubens
+        Receita receita = new Receita();                                                // Rubens
+        receita = controller.getReceita(stringAux);                                     // Rubens
+        if (receita != null){                                                           // Rubens
+            ative = receita;                                                            // Rubens
+        }                                                                               // Rubens
+        else{                                                                           // Rubens
+            System.out.println("Receita não cadastrada!");                              // Rubens
+        }                                                                               // Rubens
         //Procura no Catalogo a receita com o mesmo nome.
 //        view();
     }
@@ -45,7 +57,7 @@ public class CatalogoView {
         do {
             if (ative == null) {
                 //Se NÃO estiver com uma receita ativa, mostra mensagem.
-                tela = "Nenhuma receita encontrada!";
+                tela = "Não existe receita cadastrada!";
             } else {
                 //Se estiver com uma receita ativa, continua.
                 //Monta o layout da tela com os dados da receita.
@@ -122,6 +134,9 @@ public class CatalogoView {
     public void previous() {
         //Se estiver com uma receita ativa, ativa a anterior receita.
         //Se NÃO estiver com uma receita ativa, ativa a última receita.
+        if (currentIndex == 1) { // Rubens
+            currentIndex = controller.getTotal() + 1;
+        }
         if (ative != null) currentIndex--;
 //        try {
 //            ative = controller.getReceita(currentIndex);
@@ -130,7 +145,8 @@ public class CatalogoView {
 //        }
 //        if (ative == null) {
 //            currentIndex = controller.getTotal();
-            currentIndex = currentIndex <= 0 ? 1 : controller.getTotal();
+//            currentIndex = currentIndex <= 0 ? 1 : controller.getTotal();
+              currentIndex = currentIndex <= 0 ? 1 : currentIndex; // Rubens
             ative = controller.getReceita(currentIndex);
 //        }
 //        view();
@@ -150,6 +166,13 @@ public class CatalogoView {
                 ative = null;
 //                currentIndex = 1;
 //                next();
+                currentIndex = 1;                                   // Rubens
+                if (controller.getTotal() >= 1) {                   // Rubens
+                     ative = controller.getReceita(currentIndex);   // Rubens
+                }                                                   // Rubens
+                else{                                               // Rubens
+                    ative = null;                                   // Rubens
+                }                                                   // Rubens
                 break;
             } else if (opcao.equals("N")){
 //                view();

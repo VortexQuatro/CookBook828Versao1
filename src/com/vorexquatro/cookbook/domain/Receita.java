@@ -17,6 +17,10 @@ public class Receita {
         this.categoria = categoria;
     }
 
+    public Receita() { // Rubens
+
+    }
+
     public String getNome() {
         return nome;
     }
